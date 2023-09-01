@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+  <head>
+    <title>Client-back</title>
+    <link rel="stylesheet" href="css/popup.css">
+
+    <script src="js/jquery-3.5.1-min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/web3.min.js"></script>
+    <script src="js/eventPage.js"></script>
+    <script type="module" src="js/popup.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/crypto-js.min.js"></script>
+    <script src="js/aes.min.js"></script>
+
+    <style>
+      body {
+        min-width: 550px;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <h2> CookieChain</h2>
+   
+    <h3>Add Compartment: 
+        <span> 
+          <input type="text" id="new_compartment" size="8px">
+        </span>
+        <span>
+          <input type="submit" id="insert_comparment" value="Add Compartment"/> 
+        </span>
+    </h3>
+
+    <h3>Add Profile: 
+      <span> 
+        <input type="text" id="new_profile" size="8px"> 
+        <!-- issue01: when add a letter, the items is the dropbox are not reset before populated-->
+      </span>
+
+      <span>    
+        <select name="selected_compartment_to_add_profile" id="selected_compartment_to_add_profile"></select> 
+        
+      </span>
+
+      Private Key:
+      <span> 
+        <input type="text" id="private_key" size="8px"> 
+      </span>
+      
+      <span>
+        <input type="submit" id="insert_profile" value="Add Profile"/>
+      </span>
+
+      <span id="success" style="color:rgb(18, 238, 18)">
+      </span>
+    </h3>
+
+    <h3>Add domain: 
+      <span> 
+        <input type="text" id="new_domain" size="8px">
+        <!-- issue02: when add a letter, the items is the dropbox are not reset before populated-->
+      </span>
+
+      <span>    
+        <select name="selected_compartment_to_add_domain" id="selected_compartment_to_add_domain"></select>
+      </span>
+
+      <span>    
+        <select name="selected_profile_to_add_domain" id="selected_profile_to_add_domain"></select>
+      </span>
+
+      <span>
+        <input type="submit" id="insert_domain" value="Add Domain"/>
+      </span>
+
+      <span id="success2" style="color:rgb(18, 238, 18)">
+      </span>
+
+    <h3>Select Domain: 
+      <span>  
+        <select name="selected_domain" id="selected_domain"></select>
+      </span>
+    </h3> 
+ 
+    <input type="submit" id="filter_domain" value="Filter domains"/>
+
+    <h3>View Profile Tree</h3>
+    <div id="renderList" class="renderlist"></div>
+
+    
+  </body>
+</html>
